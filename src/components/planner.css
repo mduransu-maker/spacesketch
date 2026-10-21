@@ -1,0 +1,1708 @@
+.room-planner {
+  background: #f5f7fa;
+  padding-bottom: 24px;
+}
+.plan-intro {
+  background: white;
+  border-bottom: 1px solid var(--line);
+  padding: 32px 0;
+}
+.plan-intro > .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+}
+.plan-intro .eyebrow {
+  margin-bottom: 12px;
+  font-size: 9px;
+}
+.plan-intro h1 {
+  font-size: 34px;
+  letter-spacing: -0.045em;
+}
+.plan-intro p:not(.eyebrow) {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.prototype-chip {
+  font-size: 8px;
+  background: #f2efbf;
+  color: #786b1b;
+  letter-spacing: 0.08em;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+.plan-intro-label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.plan-intro-label svg {
+  color: var(--blue);
+}
+.planner-workspace {
+  width: min(1500px, calc(100% - 64px));
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: 218px minmax(0, 1fr) 252px;
+  align-items: start;
+  border: 1px solid #dce3ed;
+  border-radius: 5px;
+  background: white;
+  overflow: hidden;
+}
+.parts-library,
+.part-inspector {
+  padding: 22px 17px;
+  background: #fff;
+  min-width: 0;
+}
+.parts-library {
+  border-right: 1px solid #dce3ed;
+}
+.part-inspector {
+  border-left: 1px solid #dce3ed;
+  align-self: stretch;
+}
+.sidebar-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 19px;
+}
+.sidebar-heading h2 {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  font-weight: 650;
+}
+.plan-section-number {
+  font-size: 9px;
+  font-family: monospace;
+  color: #8a98ae;
+  border: 1px solid #d9e1ed;
+  border-radius: 3px;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plan-format-label {
+  font-size: 10px;
+  display: block;
+  color: #64738a;
+}
+.plan-format-label select {
+  appearance: auto;
+  background: white;
+  border: 1px solid #dce3ed;
+  padding: 9px 7px;
+  width: 100%;
+  border-radius: 3px;
+  color: var(--ink);
+  font-size: 12px;
+  margin-top: 7px;
+  min-height: 39px;
+}
+.plan-area {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 12px;
+}
+.plan-area > span {
+  font-size: 18px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.plan-area small {
+  font-size: 8px;
+  color: #8090a7;
+  line-height: 1.35;
+}
+.parts-heading {
+  margin-top: 27px;
+  margin-bottom: 8px;
+}
+.library-help {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.parts-buttons {
+  display: grid;
+  gap: 7px;
+}
+.part-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  border: 1px solid #e0e6ee;
+  border-radius: 4px;
+  padding: 10px;
+  background: #fff;
+  color: var(--ink);
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.part-button:hover {
+  border-color: #8fa5cd;
+  background: #f3f6fb;
+}
+.part-button > svg {
+  color: #426094;
+  flex-shrink: 0;
+}
+.part-button > span:not(.part-plus) {
+  display: flex;
+  flex-direction: column;
+}
+.part-button strong {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.part-button small {
+  font-size: 8px;
+  color: #8b98ac;
+  line-height: 1.5;
+}
+.part-plus {
+  font-size: 18px;
+  margin-left: auto;
+  color: #8394b0;
+  line-height: 1;
+}
+.library-footnote {
+  font-size: 9px;
+  line-height: 1.7;
+  color: #8a97a9;
+  margin-top: 15px;
+}
+.plan-center {
+  min-width: 0;
+  background: #f8fafc;
+}
+.drawing-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-bottom: 1px solid #dce3ed;
+  padding: 10px 15px;
+  background: #fff;
+  min-height: 54px;
+}
+.history-buttons,
+.drawing-options {
+  display: flex;
+  gap: 4px;
+}
+.drawing-toolbar button {
+  background: white;
+  border: 1px solid #e3e8f0;
+  border-radius: 3px;
+  width: 31px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #587099;
+}
+.drawing-toolbar button:hover {
+  background: #f0f4fa;
+}
+.drawing-toolbar button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.drawing-options {
+  margin-left: auto;
+}
+.drawing-options button[aria-pressed="true"] {
+  background: #edf2fb;
+  border-color: #b8c9e5;
+  color: var(--blue);
+}
+.drawing-title {
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: #486088;
+}
+.drawing-title > span {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 8px;
+  letter-spacing: 0;
+  color: #8a99ae;
+  margin-top: 3px;
+}
+.drawing-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 420px;
+  background: #fff;
+  overflow: hidden;
+}
+.plan-drawing {
+  width: 100%;
+  height: auto;
+  display: block;
+  touch-action: none;
+  user-select: none;
+  max-height: 510px;
+}
+.plan-drawing g[role="button"]:focus-visible > rect:first-child {
+  stroke: #bba120;
+  stroke-width: 18;
+  stroke-dasharray: 45 30;
+  fill: #f3e85c12;
+}
+.drawing-stage-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #8492a8;
+  font-size: 8px;
+  padding: 20px 10px 16px;
+}
+.drawing-status {
+  font-size: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid #e3e8f0;
+  border-bottom: 1px solid #e3e8f0;
+  padding: 10px 16px;
+  background: white;
+  color: #8593a9;
+}
+.drawing-status > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #6f9e71;
+}
+.plan-actions {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.plan-project-name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.plan-project-name > span {
+  font-size: 8px;
+  color: #8393a9;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.plan-project-name > input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dce3ed;
+  padding: 6px 0;
+  color: var(--ink);
+  font-size: 12px;
+  min-width: 0;
+}
+.plan-actions > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.plan-actions .button {
+  min-height: 42px;
+  padding: 10px 14px;
+  font-size: 10px;
+  gap: 10px;
+}
+.plan-actions .button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.plan-notice {
+  display: flex;
+  gap: 9px;
+  margin: 0 16px 18px;
+  border-top: 1px solid #e1e7f0;
+  padding-top: 14px;
+  align-items: flex-start;
+}
+.notice-icon {
+  border: 1px solid #aebacc;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  color: #8593a9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.plan-notice p {
+  font-size: 9px;
+  color: #8693a6;
+  line-height: 1.7;
+}
+.selected-part-heading {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin: 20px 0;
+}
+.selected-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f3e85b;
+  color: #4d4925;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: monospace;
+  flex-shrink: 0;
+}
+.selected-part-heading h3 {
+  font-size: 15px;
+  letter-spacing: -0.025em;
+}
+.selected-part-heading > div > span {
+  font-size: 9px;
+  color: #8998ad;
+}
+.deselect-button {
+  margin-left: auto;
+  background: transparent;
+  border: 0;
+  color: #95a3b6;
+  padding: 5px;
+}
+.inspector-tool-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+.inspector-tool-row button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  background: #f7f9fc;
+  border: 1px solid #e2e8f1;
+  border-radius: 3px;
+  padding: 10px 3px;
+  color: #516a93;
+}
+.inspector-tool-row button > span {
+  font-size: 8px;
+  white-space: nowrap;
+}
+.inspector-tool-row button:hover {
+  background: #edf2fa;
+}
+.inspector-tool-row button:disabled {
+  opacity: 0.4;
+}
+.dimension-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 15px;
+}
+.plan-number-field {
+  min-width: 0;
+}
+.plan-number-field > span {
+  display: block;
+  font-size: 9px;
+  color: #8292a9;
+  margin-bottom: 6px;
+}
+.plan-number-field > div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dce3ed;
+  border-radius: 3px;
+  overflow: hidden;
+  padding-right: 6px;
+}
+.plan-number-field input {
+  min-width: 0;
+  width: 100%;
+  font-size: 11px;
+  border: 0;
+  background: white;
+  padding: 9px 5px;
+  color: var(--ink);
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.plan-number-field input::-webkit-inner-spin-button,
+.plan-number-field input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.plan-number-field > div > span {
+  font-size: 8px;
+  color: #8b99ad;
+}
+.property-group-label {
+  font-size: 8px;
+  letter-spacing: 0.05em;
+  color: #7d8fa8;
+  margin-top: 22px;
+}
+.hinge-button {
+  margin-top: 15px;
+  border: 1px solid #dce3ed;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  color: #5f7497;
+  padding: 9px;
+  font-size: 9px;
+  border-radius: 3px;
+}
+.inspector-note {
+  font-size: 9px;
+  color: #8b98ac;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+.no-part-selected {
+  padding: 28px 6px 33px;
+  text-align: center;
+  color: #90a1ba;
+}
+.no-part-selected svg {
+  margin: 0 auto 12px;
+  display: block;
+}
+.no-part-selected h3 {
+  font-size: 17px;
+  color: #597198;
+}
+.no-part-selected p {
+  font-size: 10px;
+  line-height: 1.8;
+  margin-top: 12px;
+}
+.plan-summary {
+  border-top: 1px solid #e2e8f1;
+  margin-top: 24px;
+  padding-top: 18px;
+}
+.plan-summary h3 {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plan-summary h3 > span {
+  background: #edf2fa;
+  padding: 4px 7px;
+  border-radius: 3px;
+  color: #7e94b7;
+  font-family: monospace;
+  font-size: 9px;
+}
+.plan-summary ul {
+  padding: 0;
+  margin: 12px 0 0;
+  list-style: none;
+}
+.plan-summary li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 0;
+  font-size: 10px;
+  color: #7d8ca3;
+}
+.plan-summary li strong {
+  font-size: 10px;
+  font-weight: 500;
+  color: #4a638e;
+}
+.plan-summary > p {
+  font-size: 10px;
+  color: #8998ac;
+  margin-top: 15px;
+}
+.plan-warnings {
+  background: #fff9e9;
+  border: 1px solid #eee1b5;
+  border-radius: 3px;
+  padding: 11px;
+  margin-top: 18px;
+}
+.plan-warnings h3 {
+  font-size: 10px;
+  letter-spacing: 0;
+  font-family: var(--font-sans);
+  color: #8e762b;
+}
+.plan-warnings p {
+  font-size: 9px;
+  color: #a18a49;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+.prepare-request {
+  border: 1px solid #d2ddec;
+  background: white;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 10px;
+  padding: 12px;
+  margin-top: 24px;
+  border-radius: 3px;
+}
+.prepare-request:hover {
+  background: #f4f7fc;
+}
+.planner-message {
+  font-size: 10px;
+  padding: 12px 14px;
+  background: #ecf2e9;
+  border: 1px solid #cfdeca;
+  margin: 0 16px 15px;
+  color: #4a6f42;
+  border-radius: 3px;
+}
+.planner-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+  font-size: 9px;
+  color: #8593a7;
+}
+.planner-bottom > span,
+.planner-bottom > button {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.planner-bottom > button {
+  font-size: 9px;
+  color: #7f92b0;
+  background: transparent;
+  border: 0;
+  padding: 5px;
+}
+.request-panel {
+  background: white;
+  border: 1px solid #dce3ed;
+  padding: 30px;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 50px;
+  border-radius: 4px;
+}
+.request-panel h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.request-panel p:not(.eyebrow) {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.request-panel .request-help {
+  font-size: 10px !important;
+  margin-top: 12px;
+}
+.request-panel > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+.request-panel .button {
+  font-size: 10px;
+  padding: 12px;
+  gap: 8px;
+}
+.request-panel .text-link {
+  font-size: 10px;
+  justify-content: center;
+  margin-top: 5px;
+}
+@media (min-width: 1600px) {
+  .drawing-stage {
+    min-height: 500px;
+  }
+  .plan-drawing {
+    max-height: 580px;
+  }
+}
+@media (max-width: 1150px) {
+  .planner-workspace {
+    width: calc(100% - 36px);
+    grid-template-columns: 190px minmax(0, 1fr) 220px;
+  }
+  .parts-library,
+  .part-inspector {
+    padding: 18px 12px;
+  }
+  .drawing-stage {
+    min-height: 340px;
+  }
+  .drawing-title > span {
+    display: none;
+  }
+  .inspector-tool-row {
+    gap: 3px;
+  }
+  .inspector-tool-row button > span {
+    font-size: 7px;
+  }
+  .dimension-fields {
+    gap: 6px;
+  }
+  .plan-project-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .plan-actions > div {
+    flex-wrap: wrap;
+  }
+  .plan-actions .button-blue {
+    flex: 1;
+  }
+  .plan-intro h1 {
+    font-size: 30px;
+  }
+  .planner-bottom {
+    width: calc(100% - 36px);
+  }
+}
+@media (max-width: 950px) {
+  .planner-workspace {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+  .part-inspector {
+    grid-column: 1/-1;
+    border-left: 0;
+    border-top: 1px solid #dce3ed;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+  }
+  .part-inspector > .sidebar-heading {
+    grid-column: 1/-1;
+  }
+  .part-inspector .selected-part-heading,
+  .part-inspector .inspector-tool-row {
+    margin-top: 0;
+  }
+  .part-inspector .plan-summary {
+    grid-column: 2;
+    grid-row: 3/9;
+    margin: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
+  .part-inspector .plan-warnings {
+    grid-column: 1/-1;
+  }
+  .part-inspector .prepare-request {
+    grid-column: 1/-1;
+    margin-top: 15px;
+  }
+  .part-inspector .property-group-label {
+    margin-top: 15px;
+  }
+  .dimension-fields {
+    margin-top: 12px;
+  }
+  .no-part-selected {
+    grid-column: 1;
+    grid-row: 2/7;
+  }
+  .request-panel {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .request-panel > div:last-child {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .plan-intro-label {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .plan-intro {
+    padding: 25px 0;
+  }
+  .plan-intro h1 {
+    font-size: 28px;
+  }
+  .plan-intro .eyebrow {
+    font-size: 8px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .plan-intro p:not(.eyebrow) {
+    font-size: 11px;
+    max-width: 280px;
+  }
+  .planner-workspace {
+    width: calc(100% - 24px);
+    grid-template-columns: 1fr;
+    margin-top: 14px;
+  }
+  .parts-library {
+    border-right: 0;
+    border-bottom: 1px solid #dce3ed;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 15px;
+  }
+  .parts-library > .sidebar-heading:first-child {
+    margin: 0;
+    grid-column: 1/-1;
+  }
+  .parts-library .plan-format-label {
+    font-size: 9px;
+  }
+  .parts-library .plan-area {
+    align-self: center;
+    flex-direction: column;
+    gap: 1px;
+    margin: 15px 0 0;
+  }
+  .plan-area small {
+    font-size: 8px;
+  }
+  .parts-library .parts-heading {
+    grid-column: 1/-1;
+    margin: 10px 0 0;
+  }
+  .library-help {
+    grid-column: 1/-1;
+    margin: 0;
+    font-size: 9px;
+  }
+  .parts-buttons {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+  .part-button {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 3px;
+    text-align: center;
+  }
+  .part-button > svg {
+    height: 18px;
+  }
+  .part-button strong {
+    font-size: 9px;
+  }
+  .part-button small {
+    font-size: 7px;
+  }
+  .part-plus {
+    display: none;
+  }
+  .library-footnote {
+    grid-column: 1/-1;
+    font-size: 8px;
+    margin: 0;
+  }
+  .drawing-stage {
+    min-height: 280px;
+  }
+  .drawing-stage-hint {
+    font-size: 7px;
+    padding: 15px 8px;
+  }
+  .drawing-toolbar {
+    padding: 9px 12px;
+    gap: 9px;
+  }
+  .drawing-title {
+    font-size: 8px;
+  }
+  .drawing-toolbar button {
+    width: 27px;
+    height: 27px;
+  }
+  .drawing-status {
+    font-size: 7px;
+    padding: 10px 12px;
+  }
+  .plan-actions {
+    padding: 17px 12px;
+  }
+  .plan-project-name {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+  .plan-actions .button {
+    min-height: 42px;
+  }
+  .part-inspector {
+    padding: 18px 16px;
+    gap: 0 18px;
+  }
+  .part-inspector .plan-summary {
+    grid-column: 2;
+  }
+  .inspector-tool-row button > span {
+    font-size: 7px;
+  }
+  .selected-part-heading h3 {
+    font-size: 13px;
+  }
+  .selected-part-heading > div > span {
+    font-size: 8px;
+  }
+  .selected-number {
+    height: 25px;
+    width: 25px;
+    font-size: 10px;
+  }
+  .part-inspector .plan-format-label {
+    font-size: 9px;
+  }
+  .plan-format-label select {
+    font-size: 11px;
+  }
+  .plan-number-field > span {
+    font-size: 8px;
+  }
+  .plan-number-field input {
+    font-size: 10px;
+  }
+  .dimension-fields {
+    gap: 5px;
+  }
+  .plan-number-field > div > span {
+    font-size: 7px;
+  }
+  .property-group-label {
+    font-size: 7px;
+  }
+  .no-part-selected {
+    padding: 20px 0;
+  }
+  .no-part-selected h3 {
+    font-size: 15px;
+  }
+  .no-part-selected p {
+    font-size: 9px;
+  }
+  .planner-bottom {
+    width: calc(100% - 24px);
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 8px;
+    padding-inline: 4px;
+  }
+  .planner-bottom button {
+    font-size: 8px;
+  }
+  .request-panel {
+    padding: 22px;
+    margin-top: 15px;
+  }
+  .request-panel h2 {
+    font-size: 24px;
+  }
+  .request-panel > div:last-child {
+    flex-direction: column;
+  }
+  .plan-notice p {
+    font-size: 8px;
+  }
+  .plan-notice {
+    margin-inline: 12px;
+  }
+  .inspector-note {
+    font-size: 8px;
+  }
+  .hinge-button {
+    font-size: 8px;
+    padding: 7px;
+  }
+  .plan-summary h3 {
+    font-size: 10px;
+  }
+}
+.plan-number-field input:disabled {
+  background: #f2f5fa;
+  color: #9aa8bc;
+  cursor: not-allowed;
+}
+
+/* Keep drawing, tools and properties within easy reach. */
+.planner-workspace {
+  overflow: clip;
+}
+.mobile-plan-tabs,
+.mobile-plan-caption,
+.mobile-selection-bar {
+  display: none;
+}
+.zoom-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #e3e8f0;
+  background: #f8fafc;
+}
+.zoom-toolbar > button {
+  width: 38px;
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #dce3ed;
+  border-radius: 4px;
+  background: white;
+  color: #48618b;
+}
+.zoom-toolbar > span {
+  width: 50px;
+  text-align: center;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: #627694;
+}
+.zoom-toolbar > button:last-child {
+  width: auto;
+  padding-inline: 11px;
+  margin-left: auto;
+  font-size: 11px;
+}
+.zoom-toolbar > button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.zoom-toolbar > button[aria-pressed="true"] {
+  background: #e9eff9;
+  border-color: #9db2d4;
+  color: var(--blue);
+}
+.plan-drawing {
+  touch-action: pan-y;
+}
+.drawing-status,
+.drawing-stage-hint {
+  font-size: 10px;
+}
+.drawing-title {
+  font-size: 10px;
+}
+.drawing-title > span {
+  font-size: 10px;
+}
+.sidebar-heading h2 {
+  font-size: 13px;
+}
+.library-help,
+.part-button strong {
+  font-size: 12px;
+}
+.part-button small {
+  font-size: 10px;
+}
+.library-footnote,
+.inspector-note,
+.plan-notice p {
+  font-size: 11px;
+}
+.plan-number-field > span,
+.plan-format-label {
+  font-size: 11px;
+}
+.plan-number-field input {
+  min-height: 42px;
+  font-size: 13px;
+}
+.plan-number-field > div > span {
+  font-size: 10px;
+}
+.inspector-tool-row button {
+  min-height: 55px;
+}
+.inspector-tool-row button > span {
+  font-size: 10px;
+}
+.property-group-label {
+  font-size: 10px;
+}
+.plan-summary h3,
+.plan-summary li,
+.plan-summary li strong {
+  font-size: 12px;
+}
+.part-picker-label {
+  margin-bottom: 20px;
+}
+.prepare-request {
+  font-size: 12px;
+  min-height: 46px;
+}
+.plan-actions .button {
+  font-size: 12px;
+  min-height: 46px;
+}
+.plan-project-name > input {
+  font-size: 14px;
+}
+.plan-project-name > span {
+  font-size: 10px;
+}
+.plan-actions .button-outline {
+  color: #73819a;
+}
+.plan-warnings h3,
+.plan-warnings p {
+  font-size: 11px;
+}
+.no-part-selected p {
+  font-size: 12px;
+}
+@media (max-width: 1150px) {
+  .planner-workspace {
+    grid-template-columns: 198px minmax(0, 1fr) 230px;
+    width: calc(100% - 32px);
+  }
+  .drawing-title > span {
+    display: none;
+  }
+  .part-button {
+    gap: 8px;
+  }
+}
+@media (max-width: 950px) {
+  .planner-workspace {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+  .part-inspector {
+    display: block;
+  }
+  .part-inspector .plan-summary {
+    border-top: 1px solid #e2e8f1;
+    padding-top: 18px;
+    margin-top: 24px;
+  }
+  .dimension-fields {
+    max-width: 400px;
+  }
+  .part-inspector .plan-format-label {
+    max-width: 400px;
+  }
+  .inspector-tool-row {
+    max-width: 400px;
+  }
+  .hinge-button {
+    max-width: 400px;
+  }
+}
+@media (max-width: 650px) {
+  .plan-intro {
+    padding: 24px 0 26px;
+  }
+  .plan-intro .eyebrow {
+    font-size: 10px;
+  }
+  .plan-intro p:not(.eyebrow) {
+    font-size: 14px;
+    max-width: 340px;
+  }
+  .plan-intro h1 {
+    font-size: clamp(27px, 7.5vw, 35px);
+  }
+  .room-planner {
+    padding-bottom: 24px;
+  }
+  .planner-workspace {
+    width: calc(100% - 24px);
+    display: block;
+    overflow: visible;
+    scroll-margin-top: 0;
+    border-radius: 5px;
+  }
+  .mobile-plan-tabs {
+    display: flex;
+    position: sticky;
+    top: var(--header-height);
+    z-index: 20;
+    padding: 6px;
+    gap: 4px;
+    border-bottom: 1px solid #dce3ed;
+    background: #f3f6fa;
+    border-radius: 5px 5px 0 0;
+  }
+  .mobile-plan-tabs > button {
+    flex: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    min-height: 46px;
+    padding: 8px 4px;
+    background: transparent;
+    color: #7284a0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 550;
+  }
+  .mobile-plan-tabs > button[aria-pressed="true"] {
+    color: var(--blue);
+    background: white;
+    border-color: #dce3ed;
+    box-shadow: 0 2px 5px #203b6410;
+  }
+  .planner-workspace > .parts-library,
+  .planner-workspace > .part-inspector {
+    display: none;
+  }
+  .planner-workspace[data-mobile-panel="parts"] > .parts-library {
+    display: grid;
+  }
+  .planner-workspace[data-mobile-panel="details"] > .part-inspector {
+    display: block;
+  }
+  .planner-workspace:not([data-mobile-panel="plan"]) > .plan-center {
+    display: none;
+  }
+  .mobile-plan-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 14px;
+    background: white;
+    color: var(--ink);
+    font-size: 13px;
+  }
+  .mobile-plan-caption > span:last-child {
+    font-size: 12px;
+    color: #7789a3;
+  }
+  .drawing-toolbar {
+    padding: 8px 10px;
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+  .drawing-toolbar button {
+    width: 40px;
+    height: 42px;
+  }
+  .drawing-title {
+    font-size: 10px;
+  }
+  .drawing-options {
+    gap: 5px;
+  }
+  .zoom-toolbar {
+    padding: 8px 10px;
+    gap: 4px;
+  }
+  .zoom-toolbar > button {
+    width: 40px;
+    min-height: 42px;
+  }
+  .zoom-toolbar > span {
+    width: 43px;
+    font-size: 12px;
+  }
+  .zoom-toolbar > button:last-child {
+    padding-inline: 10px;
+    width: 42px;
+  }
+  .zoom-toolbar > button:last-child > span {
+    display: none;
+  }
+  .drawing-stage {
+    min-height: 285px;
+  }
+  .drawing-stage-hint {
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+    padding: 16px 14px;
+  }
+  .drawing-stage-hint svg {
+    display: none;
+  }
+  .mobile-selection-bar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-top: 1px solid #e1e7f0;
+    background: #fffcec;
+    padding: 6px 10px;
+  }
+  .mobile-selection-bar > span {
+    font-size: 12px;
+    color: #645a2c;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mobile-selection-bar > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-shrink: 0;
+    min-width: 40px;
+    min-height: 44px;
+    border: 0;
+    background: transparent;
+    color: #756834;
+    font-size: 12px;
+    padding: 6px;
+  }
+  .drawing-status {
+    font-size: 10px;
+    line-height: 1.6;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding: 12px 14px;
+  }
+  .plan-actions {
+    padding: 18px 14px;
+  }
+  .plan-project-name {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .plan-project-name > span {
+    font-size: 10px;
+  }
+  .plan-project-name > input {
+    font-size: 16px;
+    min-height: 44px;
+  }
+  .plan-actions .button {
+    font-size: 12px;
+    min-height: 48px;
+  }
+  .plan-notice {
+    margin: 0 14px 18px;
+  }
+  .plan-notice p {
+    font-size: 11px;
+  }
+  .parts-library {
+    padding: 20px 16px;
+  }
+  .sidebar-heading h2 {
+    font-size: 15px;
+  }
+  .plan-section-number {
+    font-size: 10px;
+    height: 26px;
+    width: 26px;
+  }
+  .parts-library .plan-format-label,
+  .plan-format-label {
+    font-size: 12px;
+  }
+  .plan-format-label select {
+    font-size: 16px;
+    min-height: 46px;
+    margin-top: 9px;
+    padding: 9px;
+  }
+  .parts-library .plan-area {
+    margin-top: 10px;
+  }
+  .plan-area > span {
+    font-size: 22px;
+  }
+  .plan-area small {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .library-help {
+    font-size: 12px;
+  }
+  .parts-buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+  .part-button {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 9px;
+    padding: 12px 9px;
+    min-height: 70px;
+  }
+  .part-button > svg {
+    width: 21px;
+    height: 21px;
+  }
+  .part-button strong {
+    font-size: 12px;
+  }
+  .part-button small {
+    font-size: 10px;
+  }
+  .library-footnote {
+    font-size: 11px;
+    margin-top: 7px;
+  }
+  .part-inspector {
+    padding: 20px 16px;
+    border-top: 0;
+  }
+  .selected-part-heading {
+    margin-top: 22px;
+  }
+  .selected-part-heading h3 {
+    font-size: 19px;
+  }
+  .selected-part-heading > div > span {
+    font-size: 12px;
+  }
+  .selected-number {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+  .deselect-button {
+    width: 44px;
+    height: 44px;
+  }
+  .inspector-tool-row {
+    gap: 9px;
+    margin-top: 18px !important;
+  }
+  .inspector-tool-row button {
+    min-height: 66px;
+  }
+  .inspector-tool-row button > span {
+    font-size: 11px;
+  }
+  .part-inspector .plan-format-label {
+    font-size: 12px;
+  }
+  .dimension-fields {
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .plan-number-field > span {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+  .plan-number-field input {
+    font-size: 16px;
+    min-height: 46px;
+    padding-left: 10px;
+  }
+  .plan-number-field > div > span {
+    font-size: 11px;
+    padding-right: 3px;
+  }
+  .property-group-label {
+    font-size: 11px;
+    margin-top: 24px !important;
+  }
+  .hinge-button {
+    font-size: 12px;
+    min-height: 46px;
+  }
+  .inspector-note {
+    font-size: 12px;
+    margin-top: 17px;
+  }
+  .part-inspector .plan-summary {
+    margin-top: 25px;
+    padding-top: 20px;
+  }
+  .plan-summary h3 {
+    font-size: 14px;
+  }
+  .plan-summary h3 > span {
+    font-size: 11px;
+  }
+  .plan-summary li,
+  .plan-summary li strong {
+    font-size: 13px;
+    padding-block: 7px;
+  }
+  .no-part-selected h3 {
+    font-size: 20px;
+  }
+  .no-part-selected p {
+    font-size: 13px;
+  }
+  .plan-warnings p,
+  .plan-warnings h3 {
+    font-size: 12px;
+  }
+  .prepare-request {
+    font-size: 13px;
+    min-height: 48px;
+  }
+  .planner-message {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .planner-bottom {
+    font-size: 11px;
+    gap: 14px;
+    padding-top: 20px;
+  }
+  .planner-bottom > button {
+    font-size: 12px;
+    min-height: 44px;
+    padding: 8px 0;
+  }
+  .request-panel .button {
+    min-height: 48px;
+    font-size: 13px;
+  }
+  .request-panel p:not(.eyebrow) {
+    font-size: 14px;
+  }
+  .request-panel .request-help {
+    font-size: 12px !important;
+  }
+}
+/* Neutral standalone workspace theme. */
+.room-planner {
+  background: var(--paper);
+}
+.plan-intro {
+  background: var(--paper);
+  padding: 44px 0 28px;
+  border: 0;
+}
+.plan-intro h1 {
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 650;
+  letter-spacing: -0.055em;
+}
+.plan-intro .eyebrow {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+.plan-intro p:not(.eyebrow) {
+  font-size: 14px;
+}
+.prototype-chip {
+  background: #e1edcd;
+  color: #42612a;
+  font-size: 8px;
+}
+.plan-intro-label {
+  font-size: 11px;
+}
+.planner-workspace {
+  margin-top: 18px;
+  border-radius: 12px;
+  border-color: var(--line);
+  box-shadow: 0 12px 42px #234d3610;
+  grid-template-columns: 220px minmax(0, 1fr) 260px;
+}
+.parts-library,
+.part-inspector {
+  border-color: var(--line);
+}
+.parts-buttons {
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+.part-button {
+  padding: 10px 7px;
+  min-width: 0;
+  gap: 7px;
+  min-height: 65px;
+  border-color: var(--line);
+  border-radius: 7px;
+}
+.part-button > svg {
+  width: 17px;
+  flex-shrink: 0;
+}
+.part-button strong {
+  font-size: 10px;
+}
+.part-button small {
+  font-size: 8px;
+}
+.part-plus {
+  display: none;
+}
+.part-button:hover {
+  background: #f0f6e9;
+  border-color: #94b08f;
+}
+.drawing-stage {
+  background: #fff;
+}
+.plan-format-label select {
+  font-size: 12px;
+  border-color: var(--line);
+  min-height: 42px;
+}
+.room-size-fields {
+  margin-top: 16px;
+}
+.room-size-fields input {
+  min-width: 0;
+  width: 100%;
+  font-size: 12px;
+}
+.room-size-fields .plan-number-field > div {
+  min-width: 0;
+}
+.plan-notice {
+  background: #f1f5ea;
+}
+.plan-actions .button {
+  font-size: 11px;
+}
+.plan-project-name input {
+  font-size: 14px;
+}
+.plan-summary li {
+  font-size: 11px;
+}
+.plan-intro-label > svg {
+  color: var(--blue);
+}
+@media (max-width: 1100px) and (min-width: 651px) {
+  .planner-workspace {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+  .parts-buttons {
+    grid-template-columns: 1fr;
+  }
+  .part-inspector {
+    grid-column: 1/-1;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+  .part-inspector .dimension-fields {
+    max-width: 500px;
+  }
+}
+@media (max-width: 650px) {
+  .plan-intro {
+    padding: 28px 0 20px;
+  }
+  .plan-intro > .wrap {
+    width: calc(100% - 32px);
+  }
+  .plan-intro h1 {
+    font-size: 34px;
+  }
+  .plan-intro-label {
+    display: none;
+  }
+  .planner-workspace {
+    width: calc(100% - 24px);
+    grid-template-columns: 1fr;
+    scroll-margin-top: 12px;
+  }
+  .mobile-plan-tabs {
+    top: 0;
+    border-radius: 12px 12px 0 0;
+  }
+  .plan-actions {
+    align-items: stretch;
+  }
+  .plan-actions > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .plan-project-name {
+    width: 100%;
+  }
+  .parts-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+  .part-button strong {
+    font-size: 12px;
+  }
+  .part-button small {
+    font-size: 10px;
+  }
+  .plan-intro p:not(.eyebrow) {
+    font-size: 13px;
+  }
+  .room-size-fields input {
+    font-size: 16px;
+  }
+  .drawing-title {
+    font-size: 9px;
+  }
+  .drawing-status {
+    font-size: 9px;
+  }
+  .plan-notice {
+    font-size: 11px;
+  }
+  .plan-notice p {
+    font-size: 11px;
+  }
+  .planner-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .plan-area small {
+    font-size: 9px;
+  }
+}

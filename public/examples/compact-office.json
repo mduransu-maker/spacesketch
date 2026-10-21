@@ -1,0 +1,106 @@
+{
+  "application": "SpaceSketch",
+  "schemaVersion": 1,
+  "plan": {
+    "version": 1,
+    "title": "Compact office",
+    "length": 6000,
+    "width": 4000,
+    "items": [
+      {
+        "id": "starter-1",
+        "kind": "door",
+        "x": 1200,
+        "y": 4000,
+        "width": 900,
+        "depth": 60,
+        "rotation": 180,
+        "wall": "bottom",
+        "flipped": false
+      },
+      {
+        "id": "starter-2",
+        "kind": "window",
+        "x": 2000,
+        "y": 0,
+        "width": 1200,
+        "depth": 80,
+        "rotation": 0,
+        "wall": "top",
+        "flipped": false
+      },
+      {
+        "id": "starter-3",
+        "kind": "window",
+        "x": 4400,
+        "y": 0,
+        "width": 1200,
+        "depth": 80,
+        "rotation": 0,
+        "wall": "top",
+        "flipped": false
+      },
+      {
+        "id": "starter-4",
+        "kind": "light",
+        "x": 3000,
+        "y": 1900,
+        "width": 300,
+        "depth": 300,
+        "rotation": 0,
+        "flipped": false
+      },
+      {
+        "id": "starter-5",
+        "kind": "desk",
+        "x": 1400,
+        "y": 1000,
+        "width": 1400,
+        "depth": 700,
+        "rotation": 0,
+        "flipped": false
+      },
+      {
+        "id": "starter-6",
+        "kind": "desk",
+        "x": 4100,
+        "y": 1000,
+        "width": 1400,
+        "depth": 700,
+        "rotation": 0,
+        "flipped": false
+      },
+      {
+        "id": "starter-7",
+        "kind": "table",
+        "x": 4100,
+        "y": 2800,
+        "width": 1600,
+        "depth": 800,
+        "rotation": 0,
+        "flipped": false
+      },
+      {
+        "id": "starter-8",
+        "kind": "shelf",
+        "x": 700,
+        "y": 2700,
+        "width": 1200,
+        "depth": 400,
+        "rotation": 0,
+        "flipped": false
+      },
+      {
+        "id": "starter-9",
+        "kind": "socket",
+        "x": 1700,
+        "y": 0,
+        "width": 120,
+        "depth": 80,
+        "rotation": 0,
+        "wall": "top",
+        "flipped": false
+      }
+    ]
+  }
+}
